@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+files:
+  - source: NginxConfig/nginx.conf
+    destination: /etc/Nginx/
+hooks:
+  AfterInstall:
+    - location: NginxScripts/reloadServer.sh
+      timeout: 300
+      runas: root
+
