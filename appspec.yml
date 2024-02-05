@@ -3,6 +3,8 @@ os: linux
 files:
   - source: NginxConfig/nginx.conf
     destination: /etc/Nginx/
+  - source: NginxConfig/api-configurations
+    destination: /etc/Nginx/api-configurations
 hooks:
   AfterInstall:
     - location: NginxScripts/reloadServer.sh
