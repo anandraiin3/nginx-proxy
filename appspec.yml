@@ -3,8 +3,10 @@ os: linux
 files:
   - source: NginxConfig/nginx.conf
     destination: /etc/nginx/
+    file_exists_behavior: OVERWRITE
   - source: NginxConfig/api-configurations
     destination: /etc/nginx/api-configurations
+    file_exists_behavior: OVERWRITE
 hooks:
   AfterInstall:
     - location: NginxScripts/reloadServer.sh
