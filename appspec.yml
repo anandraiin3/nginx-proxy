@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: NginxConfig/nginx.conf
-    destination: /etc/Nginx/
+    destination: /etc/nginx/
   - source: NginxConfig/api-configurations
-    destination: /etc/Nginx/api-configurations
+    destination: /etc/nginx/api-configurations
 hooks:
   AfterInstall:
     - location: NginxScripts/reloadServer.sh
